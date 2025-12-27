@@ -1,0 +1,27 @@
+[project]
+name = "minijax"
+version = "0.1.0"
+description = "A mini machine learning framework a la JAX."
+readme = "README.md"
+authors = [
+    { name = "David Boetius", email = "david.boetius@uni-konstanz.de" }
+]
+requires-python = ">=3.14"
+dependencies = ["numpy >= 2.0, <3.0"]
+
+[project.optional-dependencies]
+demos = [
+    "matplotlib >= 3.0, < 4.0",
+    "scikit-learn >= 1.8.0, < 2.0",
+    "jupyter >= 1.1, < 2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
