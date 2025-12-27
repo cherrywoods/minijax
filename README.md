@@ -23,11 +23,11 @@ y = jit(grad(vmap(model, (0, None))))(x, params)
 ```
 
 Each of `minijax.core`, `minijax.grad`, `minijax.vmap` and `minijax.jit` is less than 100 lines of code. 
-A good place to get started is [`minijax/core.py`](https://github.com/cherrywoods/minijax/blob/main/src/minijax/core.py), the `demo.ipynb` notebook, or the `train_mnist.ipynb` notebooks.
+A good place to get started is [`minijax/core.py`](https://github.com/cherrywoods/minijax/blob/main/src/minijax/core.py), the [`demo.ipynb`](https://mybinder.org/v2/gh/cherrywoods/minijax/binder?urlpath=%2Fdoc%2Ftree%2Fdemo.ipynb) notebook, or the [`train_mnist.ipynb`](https://mybinder.org/v2/gh/cherrywoods/minijax/binder?urlpath=%2Fdoc%2Ftree%2Ftrain_mnist.ipynb) notebooks.
 
- - `demo.ipynb` trains an small neural network classifier for a 2d dataset using stochastic gradient descent.
- - `train_mnist.ipynb` trains a multi-layer-perceptron on MNIST using Adam.
- - a little extra: `derivatives.ipynb` demonstrates computing higher-order derivatives using `minijax`.
+ - [`demo.ipynb`](https://mybinder.org/v2/gh/cherrywoods/minijax/binder?urlpath=%2Fdoc%2Ftree%2Fdemo.ipynb) trains an small neural network classifier for a 2d dataset using stochastic gradient descent.
+ - [`train_mnist.ipynb`](https://mybinder.org/v2/gh/cherrywoods/minijax/binder?urlpath=%2Fdoc%2Ftree%2Ftrain_mnist.ipynb) trains a multi-layer-perceptron on MNIST using Adam.
+ - a little extra: [`derivatives.ipynb`](https://mybinder.org/v2/gh/cherrywoods/minijax/24ab76fedb2ee837381e62c90f398984b95476d9?urlpath=lab%2Ftree%2Fderivatives.ipynb) demonstrates computing higher-order derivatives using `minijax`.
 
 To get started, clone this repository, run
 ```
