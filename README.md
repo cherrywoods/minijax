@@ -22,7 +22,8 @@ def model(x, params):
 y = jit(grad(vmap(model, (0, None))))(x, params)
 ```
 
-Each of `minijax.core`, `minijax.grad`, `minijax.vmap` and `minijax.jit` is less than 100 lines of code. A good place to get started is `minijax/core.py`, the `demo.ipynb` notebook, or the `train_mnist.ipynb` notebooks.
+Each of `minijax.core`, `minijax.grad`, `minijax.vmap` and `minijax.jit` is less than 100 lines of code. 
+A good place to get started is [`minijax/core.py`](https://github.com/cherrywoods/minijax/blob/main/src/minijax/core.py), the `demo.ipynb` notebook, or the `train_mnist.ipynb` notebooks.
 
  - `demo.ipynb` trains an small neural network classifier for a 2d dataset using stochastic gradient descent.
  - `train_mnist.ipynb` trains a multi-layer-perceptron on MNIST using Adam.
@@ -30,9 +31,14 @@ Each of `minijax.core`, `minijax.grad`, `minijax.vmap` and `minijax.jit` is less
 
 To get started, clone this repository, run
 ```
-pip install -e .
+pip install -e .[demos]
 ```
 and have fun with the code!
+
+
+
+
+
 
 ## Acknowledgements
 This repo is inspired by the awesome [micrograd](https://github.com/karpathy/micrograd/) repository that implements a jet smaller PyTorch-style deep learning framework. Unlike, micrograd, the purpose of minijax is to demonstrate composable function transformations. I also wanted something that scales at least to MNIST, so minijax uses [numpy](https://numpy.org) instead of pure Python scalars.
